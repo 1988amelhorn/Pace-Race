@@ -1,5 +1,5 @@
 import React from 'react';
-import { Timer, Zap, Flame, BarChart3, Compass, History, Activity, Sun, Moon } from 'lucide-react';
+import { Timer, Zap, Flame, BarChart3, Compass, History, Activity, Sun, Moon, DollarSign, Heart } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: string;
@@ -8,6 +8,7 @@ interface HeaderProps {
   setPreferredUnit: (unit: 'mi' | 'km') => void;
   theme: 'dark' | 'light';
   toggleTheme: () => void;
+  onOpenDonate?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -17,6 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
   setPreferredUnit,
   theme,
   toggleTheme,
+  onOpenDonate,
 }) => {
   const tabs = [
     { id: 'triad', label: 'Pace Calculator', icon: Timer },
@@ -53,8 +55,21 @@ export const Header: React.FC<HeaderProps> = ({
               </div>
             </div>
 
-            {/* Global Controls: Unit Switcher & Dark/Light Mode Button */}
+            {/* Global Controls: Cash App Donate, Unit Switcher & Dark/Light Mode Button */}
             <div className="flex items-center gap-2">
+              {onOpenDonate && (
+                <button
+                  type="button"
+                  onClick={onOpenDonate}
+                  aria-label="Donate via Cash App"
+                  className="flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-black rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all min-h-[38px] cursor-pointer shadow-md shadow-emerald-500/20 active:scale-95 shrink-0"
+                  title="Donate via Cash App for your success!"
+                >
+                  <DollarSign className="w-4 h-4 fill-current stroke-[2.5]" />
+                  <span className="font-black">Donate Cash App</span>
+                </button>
+              )}
+
               <button
                 type="button"
                 onClick={toggleTheme}
