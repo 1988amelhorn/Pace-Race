@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'triad', label: 'Pace Calculator', icon: Timer },
     { id: 'splits', label: 'Race Splits', icon: BarChart3 },
     { id: 'env', label: 'Weather & Elevation', icon: Flame },
-    { id: 'stopwatch', label: 'Coach Timer', icon: Activity },
+    { id: 'stopwatch', label: 'On my whistle', icon: Activity },
     { id: 'predictor', label: 'Race Predictor', icon: Compass },
     { id: 'saved', label: 'Saved Plans', icon: History },
   ];

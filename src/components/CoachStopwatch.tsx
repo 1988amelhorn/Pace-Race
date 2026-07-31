@@ -139,7 +139,7 @@ export const CoachStopwatch: React.FC = () => {
           <div>
             <h2 className="text-xl font-black text-white flex items-center gap-2">
               <Clock className="w-6 h-6 text-[#ff6b00]" />
-              <span>Coach Live Stopwatch & SMS Split Sender</span>
+              <span>On My Whistle (Live Stopwatch & SMS Split Sender)</span>
             </h2>
             <p className="text-xs text-slate-400 font-medium mt-1">
               Time live laps, record target split gaps, and text the full workout splits directly to your runners!
