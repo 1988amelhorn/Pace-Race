@@ -1,0 +1,6 @@
+{
+  "name": "Pace Race",
+  "description": "Athletic pace, split, and environmental condition calculator for runners and track coaches.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
